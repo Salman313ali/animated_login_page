@@ -1,6 +1,5 @@
 import 'package:animated_login_page/firebase_options.dart';
 import 'package:animated_login_page/pages/auth_page.dart';
-import 'package:animated_login_page/pages/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

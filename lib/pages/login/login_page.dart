@@ -1,4 +1,4 @@
-import 'package:animated_login_page/pages/widgets/icon_button.dart';
+import 'package:animated_login_page/pages/login/widgets/icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
@@ -168,19 +168,25 @@ class _LoginPageState extends State<LoginPage> {
 
               //children of column
               children: [
-                //User Email TextFeild
+                //adding space on the top
                 SizedBox(
                   height: 75 / 1600 * height,
                 ),
+
+                //checking weather is arthboard is null
                 if (_yetiArtboard != null)
                   SizedBox(
                     width: 550 / mockupWidth * width,
                     height: 375 / 1600 * height,
+
+                    //render Yeti
                     child: Rive(
                       artboard: _yetiArtboard!,
                       fit: BoxFit.fitWidth,
                     ),
                   ),
+
+                //login form container
                 Container(
                   width: 710 / mockupWidth * width,
                   height: 600 / mockupHeight * height,
@@ -188,6 +194,8 @@ class _LoginPageState extends State<LoginPage> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
+
+                  //login form
                   child: Form(
                     key: _SigninFormKey,
                     child: Column(
@@ -196,6 +204,8 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 30 / mockupHeight * height,
                         ),
+
+                        //welcom text
                         SizedBox(
                           width: 710 / mockupWidth * width,
                           child: Text(
@@ -209,7 +219,8 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
+                        //user email text feild
                         SizedBox(
                           width: 600 / mockupWidth * width,
                           child: TextFormField(
@@ -245,6 +256,7 @@ class _LoginPageState extends State<LoginPage> {
                         const SizedBox(
                           height: 15.0,
                         ),
+                        //user password text feild
                         SizedBox(
                           width: 600 / mockupWidth * width,
                           child: TextFormField(
@@ -289,6 +301,7 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 10.0 / mockupHeight * height,
                         ),
+                        //password recovery
                         SizedBox(
                           width: 600 / mockupWidth * width,
                           child: Row(
@@ -308,6 +321,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         const Spacer(),
+                        //Button for sign up
                         SizedBox(
                           width: 600 / mockupWidth * width,
                           height: 95 / mockupHeight * height,
@@ -343,6 +357,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Text(
                   "or continue with",
+                  textScaleFactor: textScale,
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400,
                     color: Color.fromARGB(255, 68, 68, 68),
