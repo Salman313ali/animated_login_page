@@ -25,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
   StateMachineController? stateMachineController;
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _SigninFormKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -197,7 +196,6 @@ class _LoginPageState extends State<LoginPage> {
 
                   //login form
                   child: Form(
-                    key: _SigninFormKey,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -383,6 +381,34 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 150 / mockupHeight * height,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Not a member?",
+                      textAlign: TextAlign.center,
+                      textScaleFactor: textScale,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        color: const Color.fromARGB(255, 68, 68, 68),
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    Text(
+                      " Register now",
+                      textAlign: TextAlign.center,
+                      textScaleFactor: textScale,
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w400,
+                        color: Color.fromARGB(255, 45, 143, 255),
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
